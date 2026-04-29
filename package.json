@@ -1,0 +1,10 @@
+{
+  "name": "team-rbac-root",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "dev": "npm run server & npm run client"
+  }
+}
