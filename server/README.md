@@ -1,3 +1,5 @@
+[← Back to root README](../README.md)
+
 # Server — Express + MongoDB API
 
 REST API for the Team Management RBAC system. Handles authentication, user/team management, role assignment, and permission resolution.

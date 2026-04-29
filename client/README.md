@@ -1,3 +1,5 @@
+[← Back to root README](../README.md)
+
 # Client — React + Vite SPA
 
 Frontend for the Team Management RBAC system. All data is fetched from the Express backend — nothing is hardcoded.
