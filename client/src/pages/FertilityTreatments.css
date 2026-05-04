@@ -1,0 +1,710 @@
+.fertility-page {
+  min-height: 100vh;
+  background: #fff;
+  color: #001e2c;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+.fertility-container {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.fertility-anchor {
+  position: absolute;
+  top: -96px;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.fertility-header {
+  --fertility-scale: min(1, calc(100vw / 1440px));
+
+  position: relative;
+  height: 184px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.fertility-header__canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1440px;
+  height: 184px;
+  transform: translateX(-50%) scale(var(--fertility-scale));
+  transform-origin: top center;
+}
+
+.fertility-header__logo {
+  position: absolute;
+  left: 64.82px;
+  top: 46.51px;
+  width: 311.537px;
+  height: 100.854px;
+  object-fit: cover;
+}
+
+.fertility-header__nav {
+  position: absolute;
+  left: 457px;
+  top: 78.06px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 54px;
+  height: 57.616px;
+  width: 667px;
+  padding: 0 52px 1px;
+  border-radius: 100px;
+  background: #a74b99;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+}
+
+.fertility-header__nav a,
+.fertility-header__call {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fertility-header__call {
+  position: absolute;
+  left: 985px;
+  top: 78.06px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: flex-start;
+  height: 57.616px;
+  width: 396px;
+  padding: 0 28px 0 173px;
+  border-radius: 100px;
+  background: #0288c2;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+}
+
+.fertility-header__call img {
+  width: 32px;
+  height: 29.737px;
+  object-fit: contain;
+}
+
+.fertility-hero {
+  --fertility-scale: min(1, calc(100vw / 1440px));
+
+  position: relative;
+  height: 549px;
+  overflow: hidden;
+  background: #fff7fa;
+}
+
+.fertility-hero__canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1440px;
+  height: 549px;
+  transform: translateX(-50%) scale(var(--fertility-scale));
+  transform-origin: top center;
+}
+
+.fertility-hero__canvas > img {
+  position: absolute;
+  left: 299px;
+  top: 0;
+  width: 1150px;
+  height: 549px;
+  object-fit: cover;
+}
+
+.fertility-hero__overlay {
+  position: absolute;
+  left: 278px;
+  top: 0;
+  width: 672px;
+  height: 524px;
+  background: linear-gradient(90deg, #fff 0%, rgba(245, 211, 227, 0) 100%);
+  z-index: 1;
+}
+
+.fertility-hero__copy {
+  position: absolute;
+  left: 90px;
+  top: 176px;
+  width: 430px;
+  z-index: 2;
+}
+
+.fertility-hero__copy h1 {
+  margin: 0 0 28px;
+  color: #221823;
+  font-family: "Manrope", sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.1px;
+}
+
+.fertility-hero__copy p {
+  max-width: 390px;
+  margin: 0;
+  color: #4f434f;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fertility-info {
+  position: relative;
+  padding: 54px 0 76px;
+  background: #fff7fa;
+}
+
+.fertility-info h2,
+.fertility-timeline h2 {
+  margin: 0 0 18px;
+  color: #943687;
+  font-family: "Manrope", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.fertility-info p,
+.fertility-timeline p,
+.fertility-timeline li {
+  color: #414753;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fertility-info p {
+  max-width: 1120px;
+  margin: 0 0 22px;
+}
+
+.fertility-fit-card {
+  max-width: 1220px;
+  margin-top: 34px;
+  padding: 28px 34px;
+  border: 1px solid #91d8f7;
+  border-radius: 16px;
+  background: #dff3ff;
+}
+
+.fertility-fit-card h3 {
+  margin: 0 0 16px;
+  color: #001e2c;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.fertility-fit-card ul {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fertility-fit-card li {
+  position: relative;
+  padding-left: 28px;
+  color: #414753;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.fertility-fit-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #b14fa2;
+  border-radius: 50%;
+}
+
+.fertility-journey {
+  padding: 64px 0 56px;
+  background: #fff;
+  text-align: center;
+}
+
+.fertility-journey h2,
+.fertility-faq h2 {
+  margin: 0 0 18px;
+  color: #943687;
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.fertility-journey > .fertility-container > p {
+  margin: 0 0 48px;
+  color: #414753;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.fertility-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.fertility-steps::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: #c1c6d5;
+}
+
+.fertility-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.fertility-step__icon {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 66px;
+  margin-bottom: 24px;
+  border: 4px solid #fff;
+  border-radius: 999px;
+  background: #b14fa2;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.fertility-step__icon img {
+  display: block;
+  width: 21px;
+  height: 27px;
+  object-fit: contain;
+  flex: none;
+}
+
+.fertility-step:nth-child(2) .fertility-step__icon img {
+  height: 28.5px;
+}
+
+.fertility-step:nth-child(3) .fertility-step__icon img,
+.fertility-step:nth-child(5) .fertility-step__icon img {
+  width: 27px;
+}
+
+.fertility-step:nth-child(4) .fertility-step__icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.fertility-step__card {
+  min-height: 230px;
+  padding: 25px;
+  border: 1px solid #c1c6d5;
+  border-radius: 16px;
+  background: #e9f5ff;
+}
+
+.fertility-step__card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #943687;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.fertility-step__card h3 {
+  margin: 0 0 8px;
+  color: #001e2c;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.fertility-step__card p {
+  margin: 0;
+  color: #414753;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.fertility-timeline {
+  padding: 58px 0 68px;
+  background: #ffeffc;
+}
+
+.fertility-timeline ol {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fertility-timeline li {
+  display: grid;
+  gap: 3px;
+}
+
+.fertility-timeline strong {
+  color: #943687;
+  font-weight: 700;
+}
+
+.fertility-faq {
+  padding: 78px 0 130px;
+  background: #fff;
+}
+
+.fertility-faq h2 {
+  color: #001e2c;
+  font-weight: 400;
+  text-align: center;
+}
+
+.fertility-faq__list {
+  display: grid;
+  gap: 23px;
+  width: min(1033px, 100%);
+  margin: 44px auto 0;
+}
+
+.fertility-faq__item {
+  overflow: hidden;
+  border: 1px solid #c1c6d5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.fertility-faq__item button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 28px;
+  border: 0;
+  background: transparent;
+  color: #001e2c;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fertility-faq__item button img {
+  width: 13px;
+  height: 8px;
+}
+
+.fertility-faq__item p {
+  margin: 0;
+  padding: 0 28px 26px;
+  color: #414753;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (max-width: 900px) {
+  .fertility-container {
+    padding: 0 28px;
+  }
+
+  .fertility-header {
+    --fertility-scale: 1;
+
+    height: auto;
+    min-height: 92px;
+    padding: 18px 20px;
+  }
+
+  .fertility-header__canvas {
+    position: relative;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    transform: none;
+  }
+
+  .fertility-header__logo,
+  .fertility-header__nav,
+  .fertility-header__call {
+    position: static;
+  }
+
+  .fertility-header__logo {
+    width: 174px;
+    height: auto;
+    align-self: center;
+  }
+
+  .fertility-header__call {
+    width: auto;
+    min-width: 168px;
+    height: 42px;
+    margin-left: auto;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  .fertility-header__nav {
+    grid-column: 1 / -1;
+    width: 100%;
+    gap: 18px;
+    height: 42px;
+    padding: 0 22px;
+    font-size: 13px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .fertility-header__call img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .fertility-hero {
+    --fertility-scale: 1;
+
+    height: 315px;
+  }
+
+  .fertility-hero__canvas {
+    position: relative;
+    left: auto;
+    width: 100%;
+    height: 315px;
+    transform: none;
+  }
+
+  .fertility-hero__canvas > img {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 315px;
+    opacity: 0.72;
+  }
+
+  .fertility-hero__overlay {
+    left: 0;
+    top: 0;
+    width: 82%;
+    height: 100%;
+    background: linear-gradient(90deg, #fff 0%, rgba(245, 211, 227, 0.62) 58%, rgba(245, 211, 227, 0) 100%);
+  }
+
+  .fertility-hero__copy {
+    left: 28px;
+    top: 76px;
+    width: min(360px, calc(100% - 40px));
+  }
+
+  .fertility-hero__copy h1 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0;
+  }
+
+  .fertility-hero__copy p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .fertility-info {
+    padding: 23px 0 34px;
+  }
+
+  .fertility-info h2,
+  .fertility-timeline h2 {
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+
+  .fertility-info p,
+  .fertility-timeline p,
+  .fertility-timeline li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .fertility-info p {
+    margin-bottom: 12px;
+  }
+
+  .fertility-fit-card {
+    margin-top: 18px;
+    padding: 12px 15px;
+    border-radius: 5px;
+  }
+
+  .fertility-fit-card h3 {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .fertility-fit-card ul {
+    gap: 5px;
+  }
+
+  .fertility-fit-card li {
+    padding-left: 22px;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .fertility-fit-card li::before {
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-width: 1px;
+  }
+
+  .fertility-journey {
+    padding: 38px 0 26px;
+  }
+
+  .fertility-journey h2,
+  .fertility-faq h2 {
+    margin-bottom: 12px;
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  .fertility-journey > .fertility-container > p {
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .fertility-steps {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .fertility-steps::before {
+    display: none;
+  }
+
+  .fertility-step__icon {
+    width: 72px;
+    height: 54px;
+    margin-bottom: -16px;
+    border-width: 3px;
+  }
+
+  .fertility-step__icon img {
+    width: 21px;
+    height: 27px;
+  }
+
+  .fertility-step__card {
+    width: 100%;
+    min-height: 0;
+    padding: 30px 22px 22px;
+    border-radius: 14px;
+  }
+
+  .fertility-step__card span {
+    margin-bottom: 6px;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 1px;
+  }
+
+  .fertility-step__card h3 {
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .fertility-step__card p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .fertility-timeline {
+    padding: 20px 0 24px;
+  }
+
+  .fertility-timeline ol {
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .fertility-faq {
+    padding: 48px 0 95px;
+  }
+
+  .fertility-faq h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .fertility-faq__list {
+    gap: 12px;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .fertility-faq__item {
+    border-radius: 12px;
+  }
+
+  .fertility-faq__item button {
+    gap: 14px;
+    padding: 16px 18px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .fertility-faq__item button img {
+    width: 10px;
+    height: 6px;
+  }
+
+  .fertility-faq__item p {
+    padding: 0 18px 18px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1240px) {
+  .fertility-header {
+    height: calc(184px * (100vw / 1440px));
+  }
+
+  .fertility-hero {
+    height: calc(549px * (100vw / 1440px));
+  }
+}

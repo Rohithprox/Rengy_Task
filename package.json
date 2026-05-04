@@ -1,10 +1,10 @@
 {
-  "name": "team-rbac-root",
+  "name": "fertinist-landing-root",
   "private": true,
   "scripts": {
-    "server": "npm --prefix server run dev",
     "client": "npm --prefix client run dev",
-    "seed": "npm --prefix server run seed",
-    "dev": "npm run server & npm run client"
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview"
   }
 }

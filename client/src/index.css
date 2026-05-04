@@ -7,6 +7,16 @@ body {
   min-height: 100vh;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 a { color: inherit; }
 
 select, input, button { font-family: inherit; }

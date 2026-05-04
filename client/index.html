@@ -1,13 +1,470 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>client</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fertinest – Building Families with Science and Soul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Anek+Telugu:wght@100..800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="assets/Fertinest Logo 2.png" alt="Fertinest" class="logo-img" />
+      </a>
+      <div class="nav-pills-wrap">
+        <nav class="nav-pill-purple">
+          <div class="nav-dropdown-wrap">
+            <a href="#services" class="nav-dropdown-trigger">Services</a>
+            <div class="nav-dropdown">
+              <div class="dropdown-tabs">
+                <button class="dropdown-tab active" data-tab="fertility">
+                  <span class="tab-bar"></span>
+                  <span class="tab-label">Fertility Treatments</span>
+                  <img src="assets/Next Page.png" alt="" class="tab-arrow" />
+                </button>
+                <button class="dropdown-tab" data-tab="infertility">
+                  <span class="tab-bar"></span>
+                  <span class="tab-label">Infertility Conditions</span>
+                  <img src="assets/Next Page.png" alt="" class="tab-arrow" />
+                </button>
+                <button class="dropdown-tab" data-tab="maternity">
+                  <span class="tab-bar"></span>
+                  <span class="tab-label">Maternity &amp; Surgical Care</span>
+                  <img src="assets/Next Page.png" alt="" class="tab-arrow" />
+                </button>
+                <button class="dropdown-tab" data-tab="minimal">
+                  <span class="tab-bar"></span>
+                  <span class="tab-label">Minimal Access Surgeries</span>
+                  <img src="assets/Next Page.png" alt="" class="tab-arrow" />
+                </button>
+              </div>
+              <div class="dropdown-panel active" id="tab-fertility">
+                <ul>
+                  <li><span class="dp-highlight">IVF</span> / <span class="dp-highlight">Test Tube Baby</span></li>
+                  <li><span class="dp-highlight">IUI</span> (Intrauterine Insemination)</li>
+                  <li><span class="dp-highlight">Donor Programs</span> (Egg, Sperm, and Embryo)</li>
+                  <li><span class="dp-highlight">Egg / Sperm / Embryo Freezing</span> (Cryopreservation)</li>
+                  <li><span class="dp-highlight">Male Infertility Treatment</span></li>
+                  <li><span class="dp-highlight">Surgical Sperm Retrieval</span> (TESA, PESA, mTESE)</li>
+                  <li><span class="dp-highlight">Tubal Recanalization</span> (Reversing a tubectomy)</li>
+                  <li><span class="dp-highlight">Laparotomy, Laparoscopy &amp; Hysteroscopy</span> (Surgical fertility enhancement)</li>
+                </ul>
+              </div>
+              <div class="dropdown-panel" id="tab-infertility">
+                <ul>
+                  <li><span class="dp-highlight">PCOS / PCOD</span></li>
+                  <li><span class="dp-highlight">Endometriosis</span></li>
+                  <li><span class="dp-highlight">Uterine Fibroids</span></li>
+                  <li><span class="dp-highlight">Hormonal Imbalance</span></li>
+                  <li><span class="dp-highlight">Recurrent Pregnancy Loss</span></li>
+                </ul>
+              </div>
+              <div class="dropdown-panel" id="tab-maternity">
+                <ul>
+                  <li><span class="dp-highlight">Antenatal Care</span></li>
+                  <li><span class="dp-highlight">High-Risk Pregnancy</span></li>
+                  <li><span class="dp-highlight">Normal &amp; C-Section Delivery</span></li>
+                  <li><span class="dp-highlight">Postnatal Care</span></li>
+                </ul>
+              </div>
+              <div class="dropdown-panel" id="tab-minimal">
+                <ul>
+                  <li><span class="dp-highlight">Diagnostic Laparoscopy</span></li>
+                  <li><span class="dp-highlight">Operative Hysteroscopy</span></li>
+                  <li><span class="dp-highlight">Myomectomy</span></li>
+                  <li><span class="dp-highlight">Ovarian Cystectomy</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a href="#locations">Locations</a>
+          <a href="#laboratory">About Us</a>
+          <a href="#tools">Resources</a>
+        </nav>
+        <a href="tel:9182039911" class="nav-pill-blue">
+          <svg viewBox="0 0 32 32" fill="none" width="26" height="26">
+            <path d="M6 7.5C6 7.2 6.2 7 6.5 7H11c.3 0 .55.22.6.5l1.1 4.5c.05.3-.1.62-.38.75L10.2 13.9c1.5 3.3 4.3 6.1 7.6 7.6l1.15-2.12c.13-.28.45-.43.75-.38l4.5 1.1c.28.05.5.3.5.6V25.5c0 .3-.2.5-.5.5C13.5 26 6 18.3 6 7.5z" fill="#fff"/>
+          </svg>
+          9182039911
+        </a>
+      </div>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#650A76" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#services" onclick="closeMobileMenu()">Services</a>
+      <a href="#locations" onclick="closeMobileMenu()">Locations</a>
+      <a href="#laboratory" onclick="closeMobileMenu()">About Us</a>
+      <a href="#tools" onclick="closeMobileMenu()">Resources</a>
+      <a href="tel:9182039911" class="btn-book" style="text-align:center;margin-top:4px">📞 9182039911</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          NELLORE'S LEADING FERTILITY CENTRE
+        </div>
+        <h1 class="hero-title">
+          Building Families<br>with <em>Science</em> and <em>Soul</em>.
+        </h1>
+        <p class="hero-sub">Experienced Fertility Specialists. 95% Success Rate, and State-of-the-art ART Labs in the heart of Nellore. Your journey to parenthood begins with empathy.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Start Your Journey</a>
+          <a href="#testimonials" class="btn-ghost">View Success Stories</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="assets/Logo Graphic 1.png" alt="" class="hero-logo-graphic" />
+        <img src="assets/Fertinest Website hero.png" alt="Dr. Mithila – Fertility Specialist" class="hero-doctor-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TELUGU BRIDGE ═══════════════ -->
+  <div class="telugu-bridge">
+    <div class="telugu-pill">
+      <span class="telugu-text telugu-primary">“ అమ్మ ”</span>
+      <span class="telugu-text telugu-secondary">అనే పిలుపు కోసం కలలు కంటున్న వారి కోసం</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="svc-icon purple-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><circle cx="12" cy="9" r="5" fill="#650A76" opacity=".8"/><ellipse cx="12" cy="20" rx="8" ry="3.5" fill="#650A76" opacity=".4"/></svg>
+          </div>
+          <h3>IVF (In Vitro Fertilization)</h3>
+          <p>Gold-standard fertilization protocols in our ISO-certified cleanrooms/labs.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="svc-icon teal-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M5 17c0-6 3.5-10 7-10s7 4 7 10" stroke="#006688" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="9" r="3.5" fill="#006688" opacity=".35"/></svg>
+          </div>
+          <h3>IUI Treatment</h3>
+          <p>Minimally invasive intrauterine insemination for couples with specific fertility needs.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="svc-icon mid-purple-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><circle cx="12" cy="12" r="7" fill="#802B8F" opacity=".15"/><circle cx="12" cy="12" r="4" fill="#802B8F" opacity=".5"/><path d="M12 5v3M12 16v3M5 12h3M16 12h3" stroke="#802B8F" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>ICSI &amp; Blastocyst</h3>
+          <p>Advanced single-sperm injection and Day-5 embryo culture for superior results.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="svc-icon pink-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 3C9 7 4 9 4 14a8 8 0 0016 0c0-5-5-7-8-11z" fill="#79002E" opacity=".5"/><circle cx="12" cy="17" r="2" fill="#79002E"/></svg>
+          </div>
+          <h3>PESA/TESA</h3>
+          <p>Surgical sperm retrieval techniques for male factor infertility challenges.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="svc-icon orange-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="5" fill="#F97316" opacity=".15"/><path d="M8 12h8M12 8v8" stroke="#F97316" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Genetic Screening (PGT)</h3>
+          <p>Preimplantation screening to ensure healthy pregnancies and genetic wellness.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="svc-icon red-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 4c-3.5 0-6 3-6 6 0 4.5 6 10 6 10s6-5.5 6-10c0-3-2.5-6-6-6z" fill="#EF4444" opacity=".35"/><circle cx="12" cy="10" r="2.5" fill="#DC2626" opacity=".7"/></svg>
+          </div>
+          <h3>Donor Programs</h3>
+          <p>Ethical, transparent, and confidential egg and sperm donor support services.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ OUR LABORATORY ═══════════════ -->
+  <section class="laboratory" id="laboratory">
+    <div class="section-container lab-inner">
+
+      <div class="lab-features">
+        <h2 class="lab-title">Our Laboratory</h2>
+        <div class="lab-feature-list">
+          <div class="lab-feature">
+            <div class="lab-feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="20" height="18"><path d="M12 2L14.5 7.5H20L15.5 11L17 17L12 14L7 17L8.5 11L4 7.5H9.5L12 2Z" fill="#fff"/></svg>
+            </div>
+            <div>
+              <h4>ISO-5 Cleanroom Environment</h4>
+              <p>Our labs exceed global standards for air purity, utilizing HEPA filtration to eliminate VOCs that could impact delicate embryo development.</p>
+            </div>
+          </div>
+          <div class="lab-feature">
+            <div class="lab-feat-icon blue-feat">
+              <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="#004F6B" stroke-width="1.8"/><path d="M8 12l3 3 5-5" stroke="#004F6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4>AI-Driven Embryo Selection</h4>
+              <p>Non-invasive predictive algorithms analyze thousands of data points to identify the embryos with the highest implantation potential.</p>
+            </div>
+          </div>
+          <div class="lab-feature">
+            <div class="lab-feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#fff" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h4>Advanced Cryopreservation</h4>
+              <p>State-of-the-art vitrification techniques ensure survival rates exceeding 98% for oocytes and blastocysts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lab-images">
+        <div class="lab-img lab-img-tall">
+          <div class="lab-img-placeholder">
+            <svg viewBox="0 0 220 300" fill="none" width="100%"><rect width="220" height="300" rx="20" fill="#E8D5F5"/><text x="110" y="155" text-anchor="middle" font-size="12" fill="#802B8F" font-family="Anek Latin">Lab Image 1</text><text x="110" y="172" text-anchor="middle" font-size="10" fill="#9C59A5" font-family="Anek Latin">assets/lab1.jpg</text></svg>
+          </div>
+        </div>
+        <div class="lab-img lab-img-short">
+          <div class="lab-img-placeholder">
+            <svg viewBox="0 0 180 240" fill="none" width="100%"><rect width="180" height="240" rx="20" fill="#D5C0E8"/><text x="90" y="125" text-anchor="middle" font-size="11" fill="#650A76" font-family="Anek Latin">Lab Image 2</text><text x="90" y="142" text-anchor="middle" font-size="10" fill="#802B8F" font-family="Anek Latin">assets/lab2.jpg</text></svg>
+          </div>
+          <div class="certified-badge">
+            <svg viewBox="0 0 32 32" fill="none" width="28"><path d="M16 3L19 10H26L20.5 14.5L22.5 22L16 18L9.5 22L11.5 14.5L6 10H13L16 3Z" fill="#650A76"/></svg>
+            <div>
+              <strong>Certified Excellence</strong>
+              <span>Accredited with the most rigorous global fertility standards.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ LOCATIONS ═══════════════ -->
+  <section class="locations" id="locations">
+    <div class="section-container locations-inner">
+      <div class="locations-text">
+        <p class="locations-label">Locations :</p>
+        <h2>Nellore | Ananthapur</h2>
+      </div>
+      <div class="locations-map">
+        <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="ap-map">
+          <path d="M140 18 C110 28 75 48 55 88 C35 128 45 158 65 188 C85 218 95 248 115 268 C135 288 140 305 140 305 C140 305 145 288 165 268 C185 248 195 218 215 188 C235 158 245 128 225 88 C205 48 170 28 140 18Z" fill="white" opacity=".22" stroke="white" stroke-width="1.5"/>
+          <path d="M140 18 C125 35 100 55 85 85 C68 118 72 145 88 172 C102 196 110 225 125 248 C133 262 140 275 140 305 C140 275 147 262 155 248 C170 225 178 196 192 172 C208 145 212 118 195 85 C180 55 155 35 140 18Z" fill="white" opacity=".12"/>
+          <circle cx="140" cy="218" r="7" fill="white"/>
+          <circle cx="140" cy="218" r="3.5" fill="#FF6B9D"/>
+          <text x="152" y="222" fill="white" font-size="11" font-family="Anek Latin" font-weight="600">Nellore</text>
+          <circle cx="88" cy="135" r="7" fill="white"/>
+          <circle cx="88" cy="135" r="3.5" fill="#FF6B9D"/>
+          <text x="100" y="139" fill="white" font-size="11" font-family="Anek Latin" font-weight="600">Ananthapur</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FERTILITY TOOLS ═══════════════ -->
+  <section class="tools-section" id="tools">
+    <div class="section-container">
+      <h2 class="tools-heading">FERTILITY TOOLS</h2>
+      <div class="tools-carousel-wrap">
+        <button class="carousel-arrow left-arrow" aria-label="Previous">&#8249;</button>
+        <div class="tools-card">
+          <!-- Left: purple info panel -->
+          <div class="tools-info">
+            <h3>Fertility Tools</h3>
+            <p>Take the first step at home. Our calculator helps you understand your cycle and optimal fertility windows.</p>
+            <ul class="tools-checklist">
+              <li>
+                <svg viewBox="0 0 20 20" fill="none" width="18"><circle cx="10" cy="10" r="9" fill="rgba(255,255,255,.2)"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Accurate Ovulation Tracking
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="none" width="18"><circle cx="10" cy="10" r="9" fill="rgba(255,255,255,.2)"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Cycle Consistency Analysis
+              </li>
+            </ul>
+          </div>
+          <!-- Right: calculator -->
+          <div class="tools-calculator">
+            <h4>Ovulation Calculator</h4>
+            <form class="calc-form" onsubmit="calculateOvulation(event)">
+              <div class="calc-field">
+                <label>FIRST DAY OF LAST PERIOD</label>
+                <input type="date" id="lastPeriod" required />
+              </div>
+              <div class="calc-field">
+                <label>AVERAGE CYCLE LENGTH (DAYS)</label>
+                <select id="cycleLength">
+                  <option value="24">24 Days</option>
+                  <option value="25">25 Days</option>
+                  <option value="26">26 Days</option>
+                  <option value="27">27 Days</option>
+                  <option value="28" selected>28 Days (Default)</option>
+                  <option value="29">29 Days</option>
+                  <option value="30">30 Days</option>
+                  <option value="31">31 Days</option>
+                  <option value="32">32 Days</option>
+                  <option value="35">35 Days</option>
+                </select>
+              </div>
+              <button type="submit" class="calc-btn">Calculate My Window</button>
+              <div class="calc-result" id="calcResult"></div>
+            </form>
+          </div>
+        </div>
+        <button class="carousel-arrow right-arrow" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CLINICAL SUCCESS RATES ═══════════════ -->
+  <section class="stats-section">
+    <div class="section-container">
+      <div class="section-header centered">
+        <h2>Clinical Success Rates</h2>
+        <p class="section-sub">Our commitment to scientific rigor translates directly into industry-leading outcomes for our patients.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num" data-target="74" data-suffix="%">0%</div>
+          <h4>Cumulative Success Rate</h4>
+          <p>Couples who start their IVF cycle with us achieving pregnancy from the first cycle.</p>
+          <div class="progress-bar"><div class="progress-fill" style="--w:74%"></div></div>
+        </div>
+        <div class="stat-card featured">
+          <div class="stat-num" data-target="98" data-suffix="%">0%</div>
+          <h4>Vitrification Survival</h4>
+          <p>Our flash-freezing technology ensures superior embryo and egg viability.</p>
+          <div class="progress-bar"><div class="progress-fill" style="--w:98%"></div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-target="12" data-suffix="k+">0</div>
+          <h4>Healthy Deliveries</h4>
+          <p>Bringing life into the world without compromising on scientific protocols.</p>
+          <div class="progress-bar"><div class="progress-fill" style="--w:85%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA BANNER ═══════════════ -->
+  <section class="cta-section" id="contact">
+    <div class="section-container cta-inner">
+      <div class="cta-text">
+        <h3>Ready to start your journey?</h3>
+        <p>Schedule a clinical walkthrough with our lead embryologists.</p>
+      </div>
+      <a href="tel:9182039911" class="btn-cta-white">Book Consultation</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TESTIMONIAL ═══════════════ -->
+  <section class="testimonial-section" id="testimonials">
+    <div class="section-container">
+      <div class="testimonial-big-card">
+        <div class="big-quote-mark">"</div>
+        <blockquote>
+          "After three years of uncertainty, Fertinest didn't just give us a medical plan; they gave us a home. Every nurse knew our names, and every setback was met with a new bridge of hope."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">TF</div>
+          <div>
+            <strong>The Thompson Family</strong>
+            <span>IVF Journey · Nellore</span>
+          </div>
+        </div>
+        <a href="#" class="btn-stories">Read More Stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-watermark" aria-hidden="true">
+      <img src="assets/Logo Graphic 1.png" alt="" />
+    </div>
+    <div class="section-container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="assets/Fertinest Logo 2.png" alt="Fertinest" class="logo-img logo-img-footer" />
+        </a>
+        <div class="footer-contact">
+          <p class="footer-contact-heading">Contact Us</p>
+          <a href="tel:+919182039911" class="footer-contact-item">
+            <img src="assets/Footer Phone.png" alt="" aria-hidden="true" />
+            +91 9182039911
+          </a>
+          <a href="mailto:mythrifertinest@gmail.com" class="footer-contact-item">
+            <img src="assets/Footer Email.png" alt="" aria-hidden="true" />
+            mythrifertinest@gmail.com
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-cols">
+          <div class="footer-col" id="footer-services">
+            <h5>Services / Treatments</h5>
+            <a href="#">Fertility Treatments</a>
+            <a href="#">Infertility Conditions</a>
+            <a href="#">Maternity &amp; Surgical Care</a>
+          </div>
+          <div class="footer-col" id="footer-locations">
+            <h5>Locations</h5>
+            <a href="#">Nellore</a>
+            <a href="#">Ananthapur</a>
+          </div>
+          <div class="footer-col" id="footer-resources">
+            <h5>Resources</h5>
+            <a href="#">Fertility Calculators</a>
+            <a href="#">Blogs</a>
+            <a href="#">About Us</a>
+          </div>
+        </div>
+        <div class="footer-line"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>All Rights Reserved &copy; 2026, Mythri Fertinest | Imagined and Crafted By <strong>TZYN Studio</strong></p>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a href="#home" class="bottom-nav-item active">
+      <svg viewBox="0 0 18 18" fill="none" width="16"><path d="M2 8L9 2l7 6v8a1 1 0 01-1 1H3a1 1 0 01-1-1V8z" fill="#650A76"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#services" class="bottom-nav-item">
+      <svg viewBox="0 0 20 20" fill="none" width="20"><rect x="2" y="2" width="7" height="7" rx="2" fill="rgba(34,24,35,0.4)"/><rect x="11" y="2" width="7" height="7" rx="2" fill="rgba(34,24,35,0.4)"/><rect x="2" y="11" width="7" height="7" rx="2" fill="rgba(34,24,35,0.4)"/><rect x="11" y="11" width="7" height="7" rx="2" fill="rgba(34,24,35,0.4)"/></svg>
+      <span>Services</span>
+    </a>
+    <a href="#tools" class="bottom-nav-item">
+      <svg viewBox="0 0 22 22" fill="none" width="20"><circle cx="11" cy="11" r="9" stroke="rgba(34,24,35,0.4)" stroke-width="1.5"/><path d="M11 7v4l3 2" stroke="rgba(34,24,35,0.4)" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span>Tools</span>
+    </a>
+    <a href="#contact" class="bottom-nav-item">
+      <svg viewBox="0 0 22 22" fill="none" width="20"><path d="M4 4.5C4 4.2 4.2 4 4.5 4H8c.3 0 .5.2.6.5l.9 3.5c0 .3-.1.6-.4.7L7.5 9.7c1.2 2.6 3.1 4.5 5.8 5.8l.9-1.6c.2-.3.4-.4.7-.4l3.5.9c.3.1.5.3.5.6V18.5c0 .3-.2.5-.5.5C8.5 19 4 12.2 4 4.5z" stroke="rgba(34,24,35,0.4)" stroke-width="1.5"/></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <script type="module" src="/script.js"></script>
+</body>
 </html>
